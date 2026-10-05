@@ -2,11 +2,8 @@
 
 Dasbor *data storytelling* produksi dan ekspor perikanan tangkap Indonesia berbasis data BPS. Pembaca menggulir dari profil 38 provinsi, ke sebaran 514 kabupaten/kota, hingga arus ekspor ke negara tujuan.
 
-**Aplikasi:** [URL-APLIKASI].streamlit.app (tanpa login, dapat dibuka di laptop dan ponsel)
-**Repositori:** https://github.com/[USERNAME]/jala-jejak-laut
-
-Proyek UAS Visualisasi Data dan Informasi (K203407), Politeknik Statistika STIS, TA 2025/2026.
-Penulis: Johana Putri Natasya Sitorus (NIM 222313150, kelas 3SD2). Dosen pengampu: Siti Mariyah, Ph.D. dan Farid Ridho, M.T.
+**Aplikasi:** https://jala-jejak-laut-indonesia.streamlit.app/ (tanpa login, dapat dibuka di laptop dan ponsel)
+**Repositori:** https://github.com/jhnptr17/jala-jejak-laut-indonesia
 
 ---
 
