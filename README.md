@@ -1,106 +1,109 @@
 # JALA — Jejak Laut Indonesia
 
-Dashboard produksi dan ekspor perikanan tangkap Indonesia.
+Dasbor *data storytelling* produksi dan ekspor perikanan tangkap Indonesia berbasis data BPS. Pembaca menggulir dari profil 38 provinsi, ke sebaran 514 kabupaten/kota, hingga arus ekspor ke negara tujuan.
 
-UAS Visualisasi Data dan Informasi — Politeknik Statistika STIS.
-Topik: **Multivariat** (38 provinsi) + **Geospasial** (514 kab/kota, choropleth
-rasio + proportional symbol absolut) + **Aliran** (Sankey 3-lapis provinsi→Indonesia→negara,
-flow map geografis, dan tren garis 2012-2025).
+**Aplikasi:** [URL-APLIKASI].streamlit.app (tanpa login, dapat dibuka di laptop dan ponsel)
+**Repositori:** https://github.com/[USERNAME]/jala-jejak-laut
 
-## Fitur desain
-- Scroll-reveal: teks & kartu insight muncul fade-in saat discroll (butuh
-  koneksi internet untuk Google Fonts; tanpa internet tetap jalan, cuma font
-  fallback-nya yang dipakai).
-- Latar gradasi kedalaman laut saat scroll, narasi kiri/kanan bergantian, siluet kapal dan ikan (SVG inline).
-- Choropleth memakai rasio (harga rata-rata Rp/kg dan % produksi laut) dengan kelas diskret; proportional symbol tetap memakai angka absolut.
-- Logo: taruh `assets/logo_bps.png` dan `assets/logo_kkp.png` (logo resmi) agar tampil di bar Sumber Data.
-- Flow map datar (Plotly scattergeo, proyeksi Natural Earth) menggantikan globe 3D.
-- Halaman mengalir (tanpa tab); bagian Kesimpulan di akhir.
-- Tab navigasi pakai `st.iframe` (API baru Streamlit) dengan fallback
-  otomatis ke `components.html` kalau versi Streamlit di komputermu lebih
-  lama dan belum punya `st.iframe` — jadi aman dipakai di versi lama maupun
-  baru tanpa perlu ubah kode.
+Proyek UAS Visualisasi Data dan Informasi (K203407), Politeknik Statistika STIS, TA 2025/2026.
+Penulis: Johana Putri Natasya Sitorus (NIM 222313150, kelas 3SD2). Dosen pengampu: Siti Mariyah, Ph.D. dan Farid Ridho, M.T.
 
-## Cara menjalankan lokal
+---
+
+## Tiga topik visualisasi
+
+| Topik | Teknik | Interaksi |
+|---|---|---|
+| Berdimensi tinggi (multivariat) | PCA biplot, parallel coordinates, heatmap terklaster skor-z, klaster K-Means | Brushing dan linking antar tampilan, pemilih jumlah klaster (2–8), tooltip |
+| Geospasial | Choropleth rasio dan proportional symbol (514 kab/kota) | Pemilih jenis peta dan indikator, zoom, pan, tooltip, legenda kelas |
+| Aliran (*flow*) | Sankey tiga lapis (provinsi, Indonesia, negara), flow map dunia, tren garis | Pemilih tahun, tooltip |
+
+Cakupan dibandingkan ketentuan minimal (Lampiran A soal):
+
+| Topik | Ketentuan minimal | Pada proyek ini |
+|---|---|---|
+| Multivariat | ≥ 8 variabel, 34 unit, 1 teknik reduksi + 2 teknik lain, brushing dan linking | 8 variabel, 38 provinsi, PCA + parallel coordinates + heatmap, brushing dan linking |
+| Geospasial | Kab/kota (± 500 unit), 2 jenis peta, klasifikasi dijustifikasi, choropleth memakai rasio | 514 kab/kota, choropleth dan proportional symbol, kuantil/kelas manual, rasio Rp/kg dan % laut |
+| Aliran | ≥ 15 entitas, 2 teknik, volume dan arah dikodekan, filter | 25 provinsi asal dan 11 negara tujuan, Sankey dan flow map, filter tahun |
+
+## Pilihan desain geospasial
+
+- **Choropleth hanya memakai rasio**, supaya luas wilayah dan besarnya produksi tidak otomatis memenangkan peta. Indikatornya: harga rata-rata ikan (nilai produksi ÷ volume produksi, Rp per kg) dan porsi tangkapan laut (produksi laut ÷ produksi total, %).
+- **Proportional symbol memakai angka absolut** (produksi total, laut, perairan darat, nilai produksi), sehingga pembaca bisa membandingkan peta rasio dengan peta besaran.
+- **Klasifikasi lima kelas diskret.** Harga memakai kuantil karena sebarannya sangat miring (median sekitar Rp29.800 per kg, maksimum jutaan rupiah). Porsi laut memakai kelas manual karena sebarannya dua kutub (149 kab/kota 0% dan 159 kab/kota 100%), sehingga kuantil menghasilkan batas kelas kembar.
+- **Abu-abu** untuk 30 kab/kota tanpa produksi, karena rasionya tidak terdefinisi.
+- **Palet** ColorBrewer YlGnBu (sequential, aman buta warna) untuk peta kelas, Okabe–Ito untuk warna kategori, dan diverging merah–biru untuk heatmap skor-z.
+
+## Sumber data
+
+Data utama bersumber dari BPS. Setiap visualisasi di aplikasi memuat keterangan *Sumber: BPS* beserta tahun datanya.
+
+| Data | Unit | Tahun | Sumber | URL | Diakses |
+|---|---|---|---|---|---|
+| Volume dan nilai produksi perikanan tangkap menurut provinsi dan jenis penangkapan | 38 provinsi | 2024 | BPS | [URL-TABEL] | 3 Oktober 2026 |
+| Volume dan nilai produksi perikanan tangkap menurut kabupaten/kota | 514 kab/kota | 2024 | BPS | [URL-TABEL] | 3 Oktober 2026 |
+| Jumlah nelayan, kapal, dan rumah tangga perikanan | 38 provinsi | 2024 | KKP (berbasis Sensus Pertanian BPS 2023) | https://portaldata.kkp.go.id/ | 3 Oktober 2026 |
+| PDRB perikanan menurut provinsi | 38 provinsi | 2024 | BPS | [URL-TABEL] | 3 Oktober 2026 |
+| Ekspor menurut provinsi asal | 38 provinsi | 2019–2026 | KKP | https://portaldata.kkp.go.id/ | 3 Oktober 2026 |
+| Ekspor menurut negara tujuan | 10 negara + Lainnya | 2012–2025 | BPS | [URL-TABEL] | 3 Oktober 2026 |
+
+Data pendukung non-BPS: batas wilayah kab/kota 2020 (berbasis data Kemendagri), diturunkan dari repositori publik `Alf-Anas/batas-administrasi-indonesia`, disederhanakan (toleransi 0,02°) dan digabung lewat kode wilayah empat digit. Batas negara pada flow map berasal dari Plotly/Natural Earth.
+
+> Judul tabel BPS yang persis dan URL lengkap dicantumkan di Daftar Pustaka makalah.
+
+## Data terolah
+
+Aplikasi hanya membaca berkas terolah di `data/`:
+
+| Berkas | Isi |
+|---|---|
+| `multivariat_provinsi.csv` | 38 provinsi × 8 variabel numerik (nelayan, kapal, RTP, produksi laut, produksi perairan darat, nilai produksi, PDRB perikanan, volume ekspor 2025) |
+| `geospasial_kabkota.csv` | 514 kab/kota: kode wilayah, produksi dan nilai produksi (laut, perairan darat, total), koordinat titik pusat |
+| `kabkota_simplified.geojson` | Batas wilayah kab/kota yang disederhanakan |
+| `aliran_ekspor_negara.csv` | Volume (ton) dan nilai FOB (ribu USD) menurut negara tujuan, 2012–2025 |
+| `ekspor_provinsi_tahun.csv` | Volume ekspor (ton) menurut provinsi asal, 2019–2026 |
+
+Ringkasan pra-pemrosesan: baris total dan baris kosong dibuang, nama wilayah diseragamkan, simbol strip dianggap nol hanya bila bermakna tidak ada produksi (data tidak tersedia tidak diubah menjadi nol), dan variabel multivariat distandardisasi dengan skor-z sebelum PCA dan K-Means. Dua rasio choropleth dihitung di `app.py` saat data dimuat (`load_geospasial`).
+
+## Struktur repositori
+
+```
+app.py                          # aplikasi Streamlit
+requirements.txt                # dependensi
+.streamlit/config.toml          # tema warna
+assets/                         # logo BPS dan KKP
+data/                           # data terolah (lihat tabel di atas)
+README.md
+```
+
+## Menjalankan secara lokal
+
 ```bash
+git clone https://github.com/[USERNAME]/jala-jejak-laut.git
+cd jala-jejak-laut
 pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## Struktur proyek
-```
-app.py                               # aplikasi utama (3 babak/tab + storytelling)
-.streamlit/config.toml               # tema warna biru laut
-data/multivariat_provinsi.csv        # 38 provinsi x 8 variabel (data ASLI, lengkap)
-data/geospasial_kabkota.csv          # 514 kab/kota + centroid lat/lon (data ASLI)
-data/kabkota_simplified.geojson      # batas wilayah 514 kab/kota (disederhanakan, 5MB)
-data/aliran_ekspor_negara.csv        # ekspor 11 negara x 2012-2025 (data ASLI, long format)
-data/ekspor_provinsi_tahun.csv       # ekspor 38 provinsi x 2019-2026 (data ASLI, long format)
-requirements.txt
-```
+Butuh koneksi internet untuk peta dasar (Carto) dan Google Fonts. Tanpa internet, font memakai cadangan sistem dan peta dasar tidak tampil.
 
-## Sumber data (lengkapi detail sitasi sebelum submit!)
-Ketiga file sumber (`multivariat.xlsx`, `produksi_perikanan_tangkap_2024.xlsx`,
-`ekspor.xls`) kamu kumpulkan sendiri dari BPS. **Saya tidak tahu persis judul
-tabel, URL, dan tanggal akses aslinya** — soal mewajibkan ini dicantumkan di
-setiap visualisasi (poin 2b) dan di makalah. Isi bagian `[...]` di
-`draf_makalah_IEEE.md` dan di caption aplikasi (`app.py` baris dekat
-`st.caption("Sumber: BPS...")`) dengan:
-- Judul tabel/publikasi BPS persis (mis. "Statistik Kelautan dan Perikanan
-  Indonesia 2024", "Ekspor Menurut Kode HS dan Negara Tujuan", dst.)
-- Tahun data
-- URL tabel BPS
-- Tanggal kamu mengakses/mengunduhnya
+## Deployment
 
-## Batas wilayah (GeoJSON) — cara didapat
-`data/kabkota_simplified.geojson` diturunkan dari shapefile batas kab/kota
-2020 (repo publik `Alf-Anas/batas-administrasi-indonesia`, berbasis data
-Kemendagri), lalu disederhanakan (simplify tolerance 0.02°) dan di-join ke
-`kode_wilayah` dari data produksimu. **481 dari 514 kab/kota (93,6%) cocok**;
-33 sisanya (mayoritas provinsi pemekaran Papua: Papua Tengah, Papua
-Pegunungan, dll., karena kode wilayahnya berbeda dari shapefile lama + 3-4
-kab/kota lain yang kodenya berubah seperti Kota Dumai) tidak tergambar warna
-di peta. Ini **data pendukung non-BPS yang sah dipakai** (soal poin 2a) —
-sebutkan di makalah bagian Metodologi & Keterbatasan.
+Aplikasi di-deploy lewat Streamlit Community Cloud dari repositori ini (branch `main`, berkas utama `app.py`) dan dapat diakses publik tanpa login maupun instalasi.
 
-## ⚠️ Yang perlu kamu cek/lengkapi sebelum submit
+## Keterbatasan
 
-1. **Sitasi sumber** (lihat di atas) — wajib di setiap visualisasi & makalah.
-2. **Data ekspor baru 11 entitas** (10 negara + "Lainnya"), padahal soal minta
-   ≥15 entitas asal/tujuan. Cari tabel BPS "Ekspor menurut Negara Tujuan"
-   yang lebih rinci (biasanya ada versi dengan 20-30 negara, bukan yang sudah
-   diringkas ke "10 negara utama + lainnya") untuk menggantikan `data/aliran_ekspor_negara.csv`.
-3. **Catatan Sankey 3-lapis**: total volume sisi provinsi dan sisi negara berasal dari dua tabel BPS berbeda cakupan sehingga tidak otomatis sama — sudah diberi catatan transparan di aplikasi, tapi jelaskan juga di makalah bagian Metodologi.
-4. **33 kab/kota tidak match ke peta** — opsional: cari kode wilayah yang
-   benar untuk kab/kota pemekaran Papua agar makin lengkap, atau cukup
-   jelaskan di bagian keterbatasan makalah (ini valid secara akademik, bukan
-   kesalahan fatal).
-5. Cek ulang bahwa variabel yang dipilih untuk PCA (`data/multivariat_provinsi.csv`)
-   sudah sesuai dengan yang ingin kamu tonjolkan — bisa ditambah/dikurangi.
-
-## Deployment (Streamlit Community Cloud)
-1. Push folder ini ke repo GitHub publik (lihat langkah git di bawah).
-   > Catatan ukuran: `kabkota_simplified.geojson` ~5 MB, masih jauh di bawah
-   > limit GitHub (100 MB/file) dan Streamlit Cloud — aman di-push langsung.
-2. Buka https://share.streamlit.io → "New app" → pilih repo & branch →
-   file utama `app.py` → Deploy.
-3. Salin URL yang diberikan (format `https://<nama>.streamlit.app`) — ini
-   alamat proyek yang dicantumkan di akhir makalah IEEE.
-4. Pastikan tautan tetap aktif sampai nilai akhir diumumkan.
-
-## Push ke GitHub
-```bash
-git init
-git add .
-git commit -m "UAS Visdat: dashboard perikanan tangkap Indonesia"
-git branch -M main
-git remote add origin https://github.com/<username>/<nama-repo>.git
-git push -u origin main
-```
+- Data negara tujuan baru mencakup 10 negara dan agregat *Lainnya*.
+- 17 dari 514 kab/kota (terutama di Papua dan Papua Barat) tidak tergambar pada peta karena kode wilayahnya tidak cocok dengan batas wilayah 2020.
+- Total sisi provinsi dan sisi negara pada Sankey berasal dari dua tabel BPS dengan cakupan berbeda, sehingga lebar pita hanya sebanding di dalam satu sisi.
+- Choropleth belum memakai rasio per penduduk atau per luas wilayah. Harga ekstrem (di atas Rp100.000 per kg) pada 31 kab/kota diduga salah catat atau salah satuan dan belum dikoreksi.
+- Jumlah klaster ditentukan pengguna, sehingga hasilnya subjektif, dan PCA hanya menangkap hubungan linear.
+- Belum ada uji pengguna; evaluasi rancangan bersifat heuristik.
 
 ## Deklarasi penggunaan AI
-Sesuai poin 7 soal (integritas akademik): proyek ini dibantu alat AI
-(Claude) untuk pembersihan data, kerangka kode aplikasi, pemrosesan
-GeoJSON, dan template makalah. Data BPS, verifikasi angka, interpretasi
-hasil, dan keputusan desain visualisasi akhir tetap menjadi tanggung jawab
-mahasiswa. Cantumkan kalimat deklarasi serupa di bagian Metodologi makalah.
+
+Penulis menggunakan Claude (Anthropic) sebagai alat bantu untuk menyusun kerangka kode aplikasi, membantu pemrosesan GeoJSON, serta menyunting narasi aplikasi dan draf makalah. Pengumpulan data BPS, verifikasi angka, interpretasi, dan keputusan akhir rancangan merupakan tanggung jawab penuh penulis.
+
+## Kredit
+
+Data: Badan Pusat Statistik dan Kementerian Kelautan dan Perikanan. Batas wilayah: Kemendagri via `Alf-Anas/batas-administrasi-indonesia`. Peta dasar: Carto/OpenStreetMap. Pustaka: Streamlit, Plotly, Altair, pandas, scikit-learn.
