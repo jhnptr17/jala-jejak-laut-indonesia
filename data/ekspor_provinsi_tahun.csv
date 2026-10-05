@@ -1,0 +1,305 @@
+provinsi,tahun,volume_ekspor_ton
+Aceh,2019,584.31
+Aceh,2020,2739.89
+Aceh,2021,3398.39
+Aceh,2022,3859.26
+Aceh,2023,4366.25
+Aceh,2024,5146.96
+Aceh,2025,2149.11
+Aceh,2026,888.96
+Bali,2019,22116.77
+Bali,2020,21174.19
+Bali,2021,23337.62
+Bali,2022,23527.47
+Bali,2023,20688.29
+Bali,2024,26298.37
+Bali,2025,28775.31
+Bali,2026,12097.1
+Banten,2019,37123.2
+Banten,2020,42639.79
+Banten,2021,46797.79
+Banten,2022,44276.95
+Banten,2023,36366.19
+Banten,2024,60097.79
+Banten,2025,56590.27
+Banten,2026,23982.85
+Bengkulu,2019,0.0
+Bengkulu,2020,0.0
+Bengkulu,2021,0.0
+Bengkulu,2022,0.42
+Bengkulu,2023,1.89
+Bengkulu,2024,1.43
+Bengkulu,2025,1.34
+Bengkulu,2026,0.3
+Daerah Istimewa Yogyakarta,2019,6.16
+Daerah Istimewa Yogyakarta,2020,100.42
+Daerah Istimewa Yogyakarta,2021,8.55
+Daerah Istimewa Yogyakarta,2022,4.89
+Daerah Istimewa Yogyakarta,2023,1.1
+Daerah Istimewa Yogyakarta,2024,29.41
+Daerah Istimewa Yogyakarta,2025,4.36
+Daerah Istimewa Yogyakarta,2026,1.62
+Dki Jakarta,2019,265204.78
+Dki Jakarta,2020,289334.81
+Dki Jakarta,2021,274950.85
+Dki Jakarta,2022,237697.88
+Dki Jakarta,2023,237487.88
+Dki Jakarta,2024,290136.83
+Dki Jakarta,2025,272277.45
+Dki Jakarta,2026,110585.59
+Gorontalo,2019,144.88
+Gorontalo,2020,83.04
+Gorontalo,2021,32.03
+Gorontalo,2022,32.68
+Gorontalo,2023,10.38
+Gorontalo,2024,114.94
+Gorontalo,2025,169.61
+Gorontalo,2026,55.43
+Jambi,2019,17.94
+Jambi,2020,23.13
+Jambi,2021,84.49
+Jambi,2022,85.25
+Jambi,2023,13.07
+Jambi,2024,0.21
+Jambi,2025,0.04
+Jambi,2026,16.56
+Jawa Barat,2019,71612.65
+Jawa Barat,2020,75626.25
+Jawa Barat,2021,73280.41
+Jawa Barat,2022,78659.46
+Jawa Barat,2023,86042.42
+Jawa Barat,2024,111958.24
+Jawa Barat,2025,117115.21
+Jawa Barat,2026,51147.01
+Jawa Tengah,2019,58246.62
+Jawa Tengah,2020,58373.18
+Jawa Tengah,2021,51504.59
+Jawa Tengah,2022,60085.8
+Jawa Tengah,2023,69276.38
+Jawa Tengah,2024,92776.79
+Jawa Tengah,2025,93114.53
+Jawa Tengah,2026,34507.3
+Jawa Timur,2019,339465.7
+Jawa Timur,2020,359376.58
+Jawa Timur,2021,348202.8
+Jawa Timur,2022,352237.14
+Jawa Timur,2023,328182.36
+Jawa Timur,2024,365120.68
+Jawa Timur,2025,375087.18
+Jawa Timur,2026,173392.23
+Kalimantan Barat,2019,2072.2
+Kalimantan Barat,2020,1059.61
+Kalimantan Barat,2021,639.91
+Kalimantan Barat,2022,1582.97
+Kalimantan Barat,2023,1939.26
+Kalimantan Barat,2024,2783.59
+Kalimantan Barat,2025,2556.56
+Kalimantan Barat,2026,1554.61
+Kalimantan Selatan,2019,2159.6
+Kalimantan Selatan,2020,2059.5
+Kalimantan Selatan,2021,2723.9
+Kalimantan Selatan,2022,1973.37
+Kalimantan Selatan,2023,1609.08
+Kalimantan Selatan,2024,1454.2
+Kalimantan Selatan,2025,1754.06
+Kalimantan Selatan,2026,1236.61
+Kalimantan Tengah,2019,3.98
+Kalimantan Tengah,2020,4.88
+Kalimantan Tengah,2021,6.14
+Kalimantan Tengah,2022,7.33
+Kalimantan Tengah,2023,11.69
+Kalimantan Tengah,2024,8.09
+Kalimantan Tengah,2025,3.1
+Kalimantan Tengah,2026,1.82
+Kalimantan Timur,2019,4101.09
+Kalimantan Timur,2020,3611.02
+Kalimantan Timur,2021,4840.08
+Kalimantan Timur,2022,4899.03
+Kalimantan Timur,2023,8843.15
+Kalimantan Timur,2024,11501.41
+Kalimantan Timur,2025,9138.79
+Kalimantan Timur,2026,4945.42
+Kalimantan Utara,2019,47210.84
+Kalimantan Utara,2020,30968.2
+Kalimantan Utara,2021,33127.48
+Kalimantan Utara,2022,35779.44
+Kalimantan Utara,2023,40706.68
+Kalimantan Utara,2024,49549.53
+Kalimantan Utara,2025,40157.66
+Kalimantan Utara,2026,17536.69
+Kepulauan Bangka Belitung,2019,7911.81
+Kepulauan Bangka Belitung,2020,9037.57
+Kepulauan Bangka Belitung,2021,8832.07
+Kepulauan Bangka Belitung,2022,11649.59
+Kepulauan Bangka Belitung,2023,10153.75
+Kepulauan Bangka Belitung,2024,12157.17
+Kepulauan Bangka Belitung,2025,12941.34
+Kepulauan Bangka Belitung,2026,6096.91
+Kepulauan Riau,2019,15233.75
+Kepulauan Riau,2020,15040.14
+Kepulauan Riau,2021,20833.44
+Kepulauan Riau,2022,25666.56
+Kepulauan Riau,2023,22079.1
+Kepulauan Riau,2024,19602.82
+Kepulauan Riau,2025,20083.45
+Kepulauan Riau,2026,9461.26
+Lampung,2019,21674.7
+Lampung,2020,26570.97
+Lampung,2021,31162.04
+Lampung,2022,30987.57
+Lampung,2023,25152.72
+Lampung,2024,20032.55
+Lampung,2025,19765.07
+Lampung,2026,9351.1
+Maluku,2019,2495.7
+Maluku,2020,9192.64
+Maluku,2021,3257.19
+Maluku,2022,11941.73
+Maluku,2023,12339.54
+Maluku,2024,10035.87
+Maluku,2025,12091.82
+Maluku,2026,7127.55
+Maluku Utara,2019,946.21
+Maluku Utara,2020,308.21
+Maluku Utara,2021,1067.73
+Maluku Utara,2022,1682.92
+Maluku Utara,2023,1448.56
+Maluku Utara,2024,1805.68
+Maluku Utara,2025,2013.11
+Maluku Utara,2026,247.31
+Nusa Tenggara Barat,2019,5135.16
+Nusa Tenggara Barat,2020,7332.29
+Nusa Tenggara Barat,2021,5499.48
+Nusa Tenggara Barat,2022,4270.63
+Nusa Tenggara Barat,2023,5136.79
+Nusa Tenggara Barat,2024,5339.75
+Nusa Tenggara Barat,2025,5047.22
+Nusa Tenggara Barat,2026,1988.31
+Nusa Tenggara Timur,2019,1817.41
+Nusa Tenggara Timur,2020,1780.73
+Nusa Tenggara Timur,2021,3554.04
+Nusa Tenggara Timur,2022,3909.22
+Nusa Tenggara Timur,2023,2549.62
+Nusa Tenggara Timur,2024,1716.03
+Nusa Tenggara Timur,2025,2280.21
+Nusa Tenggara Timur,2026,662.52
+Papua,2019,3851.92
+Papua,2020,36.55
+Papua,2021,98.82
+Papua,2022,117.08
+Papua,2023,205.52
+Papua,2024,5.05
+Papua,2025,19.56
+Papua,2026,27.8
+Papua Barat,2019,0.0
+Papua Barat,2020,3420.71
+Papua Barat,2021,1800.09
+Papua Barat,2022,1457.13
+Papua Barat,2023,1458.09
+Papua Barat,2024,425.9
+Papua Barat,2025,222.46
+Papua Barat,2026,675.72
+Papua Barat Daya,2019,0.0
+Papua Barat Daya,2020,0.0
+Papua Barat Daya,2021,0.0
+Papua Barat Daya,2022,0.0
+Papua Barat Daya,2023,0.0
+Papua Barat Daya,2024,1499.08
+Papua Barat Daya,2025,1651.43
+Papua Barat Daya,2026,150.41
+Papua Pegunungan,2019,0.0
+Papua Pegunungan,2020,0.0
+Papua Pegunungan,2021,0.0
+Papua Pegunungan,2022,0.0
+Papua Pegunungan,2023,0.0
+Papua Pegunungan,2024,0.0
+Papua Pegunungan,2025,0.0
+Papua Pegunungan,2026,0.0
+Papua Selatan,2019,0.0
+Papua Selatan,2020,0.0
+Papua Selatan,2021,0.0
+Papua Selatan,2022,0.0
+Papua Selatan,2023,0.0
+Papua Selatan,2024,1.72
+Papua Selatan,2025,2.46
+Papua Selatan,2026,0.0
+Papua Tengah,2019,0.0
+Papua Tengah,2020,0.0
+Papua Tengah,2021,0.0
+Papua Tengah,2022,0.0
+Papua Tengah,2023,0.0
+Papua Tengah,2024,7.36
+Papua Tengah,2025,31.66
+Papua Tengah,2026,52.37
+Riau,2019,10091.7
+Riau,2020,8794.23
+Riau,2021,7116.24
+Riau,2022,8572.65
+Riau,2023,11399.27
+Riau,2024,13324.64
+Riau,2025,16733.35
+Riau,2026,8338.2
+Sulawesi Barat,2019,135.5
+Sulawesi Barat,2020,27.64
+Sulawesi Barat,2021,20.55
+Sulawesi Barat,2022,24.0
+Sulawesi Barat,2023,20.91
+Sulawesi Barat,2024,0.0
+Sulawesi Barat,2025,0.0
+Sulawesi Barat,2026,0.0
+Sulawesi Selatan,2019,140546.76
+Sulawesi Selatan,2020,145058.26
+Sulawesi Selatan,2021,165306.49
+Sulawesi Selatan,2022,173650.58
+Sulawesi Selatan,2023,177988.19
+Sulawesi Selatan,2024,181354.66
+Sulawesi Selatan,2025,171584.76
+Sulawesi Selatan,2026,78727.66
+Sulawesi Tengah,2019,3493.47
+Sulawesi Tengah,2020,1355.36
+Sulawesi Tengah,2021,2552.5
+Sulawesi Tengah,2022,1010.34
+Sulawesi Tengah,2023,2417.25
+Sulawesi Tengah,2024,3273.39
+Sulawesi Tengah,2025,5428.67
+Sulawesi Tengah,2026,1553.07
+Sulawesi Tenggara,2019,3953.5
+Sulawesi Tenggara,2020,4815.52
+Sulawesi Tenggara,2021,5129.97
+Sulawesi Tenggara,2022,4310.0
+Sulawesi Tenggara,2023,6643.3
+Sulawesi Tenggara,2024,5879.49
+Sulawesi Tenggara,2025,8874.3
+Sulawesi Tenggara,2026,5255.13
+Sulawesi Utara,2019,25013.23
+Sulawesi Utara,2020,24139.55
+Sulawesi Utara,2021,20045.73
+Sulawesi Utara,2022,22335.28
+Sulawesi Utara,2023,24804.13
+Sulawesi Utara,2024,27749.64
+Sulawesi Utara,2025,29013.19
+Sulawesi Utara,2026,15666.27
+Sumatera Barat,2019,283.12
+Sumatera Barat,2020,159.65
+Sumatera Barat,2021,164.11
+Sumatera Barat,2022,124.98
+Sumatera Barat,2023,128.89
+Sumatera Barat,2024,263.39
+Sumatera Barat,2025,548.06
+Sumatera Barat,2026,313.76
+Sumatera Selatan,2019,2153.55
+Sumatera Selatan,2020,1550.28
+Sumatera Selatan,2021,1532.9
+Sumatera Selatan,2022,1287.7
+Sumatera Selatan,2023,891.3
+Sumatera Selatan,2024,1129.03
+Sumatera Selatan,2025,290.47
+Sumatera Selatan,2026,139.56
+Sumatera Utara,2019,89363.45
+Sumatera Utara,2020,117034.89
+Sumatera Utara,2021,80996.17
+Sumatera Utara,2022,76352.39
+Sumatera Utara,2023,80833.31
+Sumatera Utara,2024,102707.56
+Sumatera Utara,2025,93011.52
+Sumatera Utara,2026,50158.2
